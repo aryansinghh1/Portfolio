@@ -38,7 +38,6 @@ nav a:hover {
   color: var(--primary);
 }
 
-
 .hero {
   height: 80vh;
   display: flex;
@@ -53,9 +52,7 @@ nav a:hover {
   font-size: 3rem;
 }
 
-
 .cards {
-  
   justify-content: center;
   align-items: center;
   display: flex;
@@ -71,7 +68,6 @@ nav a:hover {
   border-radius: 10px;
   transition: transform 0.3s;
 }
-
 
 .card1:hover {
   transform: translateY(-10px);
@@ -117,12 +113,26 @@ nav a:hover {
   border-radius: 10px;
 }
 
+.myskills {
+  display: flex;
+}
+
 .skills {
   padding: 4rem 5vw;
 }
 
 .skill {
+  margin-right: 10px;
+  padding: 10px;
+  text-align: center;
+  justify-content: center;
   margin-bottom: 1rem;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+
+:hover.skill{
+    font-weight: bold;
 }
 
 form {
