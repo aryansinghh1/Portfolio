@@ -139,3 +139,21 @@ textarea {
   padding: 0.8rem;
   margin-bottom: 1rem;
 }
+
+input:focus,
+textarea:focus {
+  outline: 2px solid var(--primary);
+}
+
+.contact-me {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+button {
+  width: 100%;
+  padding: 0.8rem;
+  background: var(--primary);
+  color: white;
+  border: none;
+}
