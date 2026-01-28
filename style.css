@@ -171,3 +171,35 @@ button {
   gap: 1rem;
   margin: 1rem 0;
 }
+
+.icon {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-weight: bold;
+  color: white;
+  transition:
+    transform 0.3s,
+    background 0.3s;
+}
+
+.gmail {
+  background: #ea4335;
+}
+
+.github {
+  background: #333;
+}
+
+.linkedin {
+  background: #0a66c2;
+}
+
+.copy {
+  font-size: 0.9rem;
+  margin-top: 1rem;
+}
