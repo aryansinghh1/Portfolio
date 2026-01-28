@@ -117,3 +117,25 @@ nav a:hover {
   border-radius: 10px;
 }
 
+.skills {
+  padding: 4rem 5vw;
+}
+
+.skill {
+  margin-bottom: 1rem;
+}
+
+form {
+  max-width: 500px;
+  margin: 3rem auto;
+  background: white;
+  padding: 2rem;
+  border-radius: 10px;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 0.8rem;
+  margin-bottom: 1rem;
+}
