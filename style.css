@@ -20,3 +20,20 @@ header {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 5vw;
+}
+
+nav a {
+  text-decoration: none;
+  margin-left: 1.5rem;
+  color: var(--dark);
+  font-weight: bold;
+}
+
+nav a:hover {
+  color: var(--primary);
+}
