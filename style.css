@@ -52,3 +52,27 @@ nav a:hover {
 .hero h1 {
   font-size: 3rem;
 }
+
+
+.cards {
+  
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  gap: 2rem;
+  padding: 4rem 5vw;
+}
+
+.card1 {
+  border: 1px solid black;
+  display: flex;
+  background: white;
+  padding: 2rem;
+  border-radius: 10px;
+  transition: transform 0.3s;
+}
+
+
+.card1:hover {
+  transform: translateY(-10px);
+}
