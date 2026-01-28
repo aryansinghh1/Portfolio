@@ -157,3 +157,17 @@ button {
   color: white;
   border: none;
 }
+
+.footer {
+  background: var(--dark);
+  color: white;
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin: 1rem 0;
+}
