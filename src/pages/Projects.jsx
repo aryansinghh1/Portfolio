@@ -50,7 +50,7 @@ const Projects = () => {
           <span className="text-xs font-semibold text-primary uppercase tracking-[4px] mb-3 block font-mono">
             {'< projects >'}
           </span>
-          <h1 className="text-3xl sm:text-5xl font-extrabold text-white tracking-tight mb-6">
+          <h1 className="text-3xl sm:text-5xl font-extrabold text-foreground tracking-tight mb-6">
             Featured Work
           </h1>
           <p className="text-muted text-base sm:text-lg leading-relaxed max-w-xl">
@@ -63,7 +63,7 @@ const Projects = () => {
           {projects.map((project, index) => (
             <motion.article
               key={project.title}
-              className="group relative overflow-hidden rounded-2xl bg-surface-light/50 border border-white/5 hover:border-primary/20 transition-all duration-500"
+              className="group relative overflow-hidden rounded-2xl bg-surface-light/50 border border-foreground/5 hover:border-primary/20 transition-all duration-500"
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -74,20 +74,20 @@ const Projects = () => {
 
               <div className="relative p-8 sm:p-10 flex flex-col sm:flex-row gap-6 sm:gap-10 items-start">
                 {/* Number */}
-                <span className="text-6xl sm:text-7xl font-black text-white/[0.03] group-hover:text-primary/10 transition-colors duration-500 leading-none select-none">
+                <span className="text-6xl sm:text-7xl font-black text-foreground/[0.03] group-hover:text-primary/10 transition-colors duration-500 leading-none select-none">
                   {project.number}
                 </span>
 
                 <div className="flex-1">
                   <div className="flex items-start justify-between gap-4 mb-2">
-                    <h3 className="text-xl sm:text-2xl font-bold text-white group-hover:text-primary transition-colors duration-300">
+                    <h3 className="text-xl sm:text-2xl font-bold text-foreground group-hover:text-primary transition-colors duration-300">
                       {project.title}
                     </h3>
                     <a
                       href={project.github}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="w-10 h-10 rounded-xl bg-white/5 border border-white/5 flex items-center justify-center text-muted group-hover:text-primary group-hover:border-primary/20 group-hover:bg-primary-light transition-all duration-300 flex-shrink-0"
+                      className="w-10 h-10 rounded-xl bg-foreground/5 border border-foreground/5 flex items-center justify-center text-muted group-hover:text-primary group-hover:border-primary/20 group-hover:bg-primary-light transition-all duration-300 flex-shrink-0"
                       aria-label={`View ${project.title} on GitHub`}
                     >
                       <FiArrowUpRight size={18} className="group-hover:rotate-45 transition-transform duration-300" />
@@ -107,7 +107,7 @@ const Projects = () => {
                     {project.tags.map((tag) => (
                       <span
                         key={tag}
-                        className="px-3 py-1.5 text-xs font-mono font-medium text-muted bg-white/5 border border-white/5 rounded-lg group-hover:text-primary group-hover:border-primary/10 group-hover:bg-primary-light transition-all duration-300"
+                        className="px-3 py-1.5 text-xs font-mono font-medium text-muted bg-foreground/5 border border-foreground/5 rounded-lg group-hover:text-primary group-hover:border-primary/10 group-hover:bg-primary-light transition-all duration-300"
                       >
                         {tag}
                       </span>
