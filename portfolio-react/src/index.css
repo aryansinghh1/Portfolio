@@ -8,6 +8,7 @@
   --color-primary-dark: #4f46e5;
   --color-primary-light: rgba(99, 102, 241, 0.1);
   --color-accent: #06b6d4;
+  --color-foreground: #ffffff;
   --color-surface: #0f172a;
   --color-surface-light: #1e293b;
   --color-surface-lighter: #334155;
@@ -15,6 +16,25 @@
   --color-light: #0b1121;
   --color-muted: #94a3b8;
   --color-border: #1e293b;
+}
+
+[data-theme="light"] {
+  --color-foreground: #0f172a;
+  --color-primary-light: rgba(99, 102, 241, 0.08);
+  --color-surface: #f8fafc;
+  --color-surface-light: #f1f5f9;
+  --color-surface-lighter: #cbd5e1;
+  --color-dark: #0f172a;
+  --color-light: #ffffff;
+  --color-muted: #64748b;
+  --color-border: #e2e8f0;
+}
+
+.grid-pattern {
+  background-image:
+    linear-gradient(color-mix(in srgb, var(--color-foreground) 6%, transparent) 1px, transparent 1px),
+    linear-gradient(90deg, color-mix(in srgb, var(--color-foreground) 6%, transparent) 1px, transparent 1px);
+  background-size: 60px 60px;
 }
 
 ::selection {

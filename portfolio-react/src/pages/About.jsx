@@ -45,14 +45,14 @@ const About = () => {
           <span className="text-xs font-semibold text-primary uppercase tracking-[4px] mb-3 block font-mono">
             {'< about >'}
           </span>
-          <h1 className="text-3xl sm:text-5xl font-extrabold text-white tracking-tight mb-6">
+          <h1 className="text-3xl sm:text-5xl font-extrabold text-foreground tracking-tight mb-6">
             About Me
           </h1>
           <div className="max-w-2xl">
             <p className="text-muted text-base sm:text-lg leading-[1.8] mb-4">
               I am currently pursuing{' '}
-              <span className="text-white font-medium">B.Tech in Information Technology</span> from{' '}
-              <span className="text-white font-medium">Lovely Professional University</span>.
+              <span className="text-foreground font-medium">B.Tech in Information Technology</span> from{' '}
+              <span className="text-foreground font-medium">Lovely Professional University</span>.
             </p>
             <p className="text-muted text-base sm:text-lg leading-[1.8]">
               I specialize in full-stack web development with the MERN stack, cloud
@@ -68,7 +68,7 @@ const About = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.15 }}
         >
-          <h2 className="text-xs font-semibold text-white uppercase tracking-widest mb-8">
+          <h2 className="text-xs font-semibold text-foreground uppercase tracking-widest mb-8">
             Technical Skills
           </h2>
 
@@ -76,7 +76,7 @@ const About = () => {
             {skillCategories.map((category, index) => (
               <motion.div
                 key={category.title}
-                className="group p-5 rounded-2xl bg-surface-light/50 border border-white/5 hover:border-primary/20 hover:bg-surface-light transition-all duration-500"
+                className="group p-5 rounded-2xl bg-surface-light/50 border border-foreground/5 hover:border-primary/20 hover:bg-surface-light transition-all duration-500"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
@@ -86,13 +86,13 @@ const About = () => {
                   <div className="w-10 h-10 rounded-xl bg-primary-light flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-colors duration-300 flex-shrink-0">
                     {category.icon}
                   </div>
-                  <h3 className="text-sm font-bold text-white uppercase tracking-wider">{category.title}</h3>
+                  <h3 className="text-sm font-bold text-foreground uppercase tracking-wider">{category.title}</h3>
                 </div>
                 <div className="flex flex-wrap gap-2">
                   {category.skills.map((skill) => (
                     <span
                       key={skill}
-                      className="px-3 py-1.5 text-xs font-medium text-muted bg-white/[0.04] border border-white/5 rounded-lg group-hover:text-white group-hover:border-primary/15 transition-colors duration-300"
+                      className="px-3 py-1.5 text-xs font-medium text-muted bg-foreground/[0.04] border border-foreground/5 rounded-lg group-hover:text-foreground group-hover:border-primary/15 transition-colors duration-300"
                     >
                       {skill}
                     </span>

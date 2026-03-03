@@ -56,7 +56,7 @@ const Contact = () => {
           <span className="text-xs font-semibold text-primary uppercase tracking-[4px] mb-3 block font-mono">
             {'< contact >'}
           </span>
-          <h1 className="text-3xl sm:text-5xl font-extrabold text-white tracking-tight mb-6">
+          <h1 className="text-3xl sm:text-5xl font-extrabold text-foreground tracking-tight mb-6">
             Let's Work
             <br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent">Together</span>
@@ -81,14 +81,14 @@ const Contact = () => {
                 href={link.href}
                 target={link.label !== 'Email' ? '_blank' : undefined}
                 rel={link.label !== 'Email' ? 'noopener noreferrer' : undefined}
-                className={`group relative flex items-center gap-4 p-5 rounded-2xl bg-gradient-to-br from-transparent to-transparent bg-surface-light/50 border border-white/5 hover:border-primary/20 transition-all duration-500 ${link.color}`}
+                className={`group relative flex items-center gap-4 p-5 rounded-2xl bg-gradient-to-br from-transparent to-transparent bg-surface-light/50 border border-foreground/5 hover:border-primary/20 transition-all duration-500 ${link.color}`}
               >
-                <div className="w-12 h-12 rounded-xl bg-white/5 flex items-center justify-center text-muted group-hover:text-primary transition-colors duration-300">
+                <div className="w-12 h-12 rounded-xl bg-foreground/5 flex items-center justify-center text-muted group-hover:text-primary transition-colors duration-300">
                   {link.icon}
                 </div>
                 <div className="flex-1 min-w-0">
                   <span className="block text-xs text-muted font-medium uppercase tracking-wider">{link.label}</span>
-                  <span className="block text-sm font-semibold text-white truncate mt-0.5">{link.value}</span>
+                  <span className="block text-sm font-semibold text-foreground truncate mt-0.5">{link.value}</span>
                 </div>
                 <FiArrowUpRight size={16} className="text-muted group-hover:text-primary group-hover:rotate-45 transition-all duration-300 flex-shrink-0" />
               </a>
@@ -97,13 +97,13 @@ const Contact = () => {
 
           {/* Contact Form */}
           <motion.form
-            className="lg:col-span-3 relative p-8 sm:p-10 rounded-2xl bg-surface-light/50 border border-white/5"
+            className="lg:col-span-3 relative p-8 sm:p-10 rounded-2xl bg-surface-light/50 border border-foreground/5"
             onSubmit={handleSubmit}
             initial={{ opacity: 0, x: 30 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6, delay: 0.15 }}
           >
-            <h2 className="text-lg font-bold text-white mb-6">Send a Message</h2>
+            <h2 className="text-lg font-bold text-foreground mb-6">Send a Message</h2>
 
             <div className="space-y-5">
               <div>
@@ -118,7 +118,7 @@ const Contact = () => {
                   value={formData.name}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3.5 bg-white/[0.03] border border-white/10 rounded-xl text-sm text-white placeholder-surface-lighter focus:outline-none focus:border-primary/50 focus:bg-white/[0.05] transition-all duration-300 font-[inherit]"
+                  className="w-full px-4 py-3.5 bg-foreground/[0.03] border border-foreground/10 rounded-xl text-sm text-foreground placeholder-surface-lighter focus:outline-none focus:border-primary/50 focus:bg-foreground/[0.05] transition-all duration-300 font-[inherit]"
                 />
               </div>
 
@@ -134,7 +134,7 @@ const Contact = () => {
                   value={formData.email}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3.5 bg-white/[0.03] border border-white/10 rounded-xl text-sm text-white placeholder-surface-lighter focus:outline-none focus:border-primary/50 focus:bg-white/[0.05] transition-all duration-300 font-[inherit]"
+                  className="w-full px-4 py-3.5 bg-foreground/[0.03] border border-foreground/10 rounded-xl text-sm text-foreground placeholder-surface-lighter focus:outline-none focus:border-primary/50 focus:bg-foreground/[0.05] transition-all duration-300 font-[inherit]"
                 />
               </div>
 
@@ -150,7 +150,7 @@ const Contact = () => {
                   value={formData.message}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3.5 bg-white/[0.03] border border-white/10 rounded-xl text-sm text-white placeholder-surface-lighter resize-y focus:outline-none focus:border-primary/50 focus:bg-white/[0.05] transition-all duration-300 font-[inherit]"
+                  className="w-full px-4 py-3.5 bg-foreground/[0.03] border border-foreground/10 rounded-xl text-sm text-foreground placeholder-surface-lighter resize-y focus:outline-none focus:border-primary/50 focus:bg-foreground/[0.05] transition-all duration-300 font-[inherit]"
                 />
               </div>
 
