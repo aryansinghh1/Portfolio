@@ -14,12 +14,22 @@ const Projects = () => {
       date: 'Feb 2026 – Present',
     },
     {
+      title: 'Youtube Clone',
+      description:
+        'A fully functional YouTube clone built with React and Vite, featuring real-time video fetching from the YouTube Data API v3. The app replicates core YouTube features including video browsing, search, watch history, and a responsive dark-themed UI.',
+      tags: ['React.js', 'HTML', 'CSS', 'Tailwind CSS'],
+      color: 'from-violet-500/20 to-indigo-500/20',
+      number: '02',
+      github: 'https://github.com/aryansinghh1/YouTube_Clone',
+      date: 'Jan 2026 – Feb 2026',
+    },
+    {
       title: 'Dockerized Static Website Deployment',
       description:
         'Created a static website using HTML, CSS, and Tailwind CSS, then containerized it with Docker to run inside a lightweight container. Built the Docker image, ran it locally, and tested the application in-browser using mapped ports for smooth deployment.',
-      tags: ['Docker', 'HTML', 'CSS', 'Tailwind CSS', 'DevOps'],
+      tags: ['Docker', 'HTML', 'CSS', 'DevOps'],
       color: 'from-cyan-500/20 to-blue-500/20',
-      number: '02',
+      number: '03',
       github: 'https://hub.docker.com/r/aryansinghh1/flask-mini',
       date: 'Nov 2025 – Dec 2025',
     },
@@ -29,7 +39,7 @@ const Projects = () => {
         'A web-based chatbot that helps users search and find hotels easily. Integrated the Gemini API to handle user queries like location, budget, and hotel amenities. Performed cross-browser testing to ensure consistent UX across Chrome, Firefox, and Edge.',
       tags: ['JavaScript', 'HTML', 'CSS', 'Tailwind CSS', 'Gemini API'],
       color: 'from-amber-500/20 to-orange-500/20',
-      number: '03',
+      number: '04',
       github: 'https://github.com/aryansinghh1/Hotel-Buddy-',
       date: 'September 2025',
     },
