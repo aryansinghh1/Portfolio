@@ -23,7 +23,11 @@ const Navbar = () => {
   const navLinks = [
     { to: '/', label: 'Home' },
     { to: '/about', label: 'About' },
+    { to: '/skills', label: 'Skills' },
     { to: '/projects', label: 'Projects' },
+    { to: '/certifications', label: 'Certifications' },
+    { to: '/achievements', label: 'Achievements' },
+    { to: '/resume', label: 'Resume' },
     { to: '/contact', label: 'Contact' },
   ];
 
