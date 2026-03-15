@@ -1,5 +1,8 @@
 import { motion } from 'framer-motion';
 import { FiAward, FiCalendar, FiHash, FiDownload, FiFileText } from 'react-icons/fi';
+import w3gradsCert from '../assets/w3grads.png';
+import iotCert from '../assets/Introduction To Internet Of Things.pdf';
+import hardwareCert from '../assets/Introduction to Hardware and Operating Systems.pdf';
 
 const Certifications = () => {
   const certifications = [
@@ -9,14 +12,15 @@ const Certifications = () => {
       issuer: 'W3Grads / The Angaar Batch',
       date: 'June – July 2025',
       credentialId: 'FLAMES25DSA1816',
+      image: w3gradsCert,
       color: 'from-violet-500/20 to-indigo-500/20',
     },
     {
       title: 'Introduction to Internet of Things',
       subtitle: 'IoT fundamentals and applications',
-      issuer: 'Coursera',
+      issuer: 'NPTEL',
       date: '2024',
-      pdf: '/Introduction_To_Internet_Of_Things.pdf',
+      pdf: iotCert,
       color: 'from-cyan-500/20 to-blue-500/20',
     },
     {
@@ -24,7 +28,7 @@ const Certifications = () => {
       subtitle: 'Computer hardware & OS concepts',
       issuer: 'Coursera',
       date: '2024',
-      pdf: '/Introduction_to_Hardware_and_Operating_Systems.pdf',
+      pdf: hardwareCert,
       color: 'from-amber-500/20 to-orange-500/20',
     },
   ];
@@ -102,6 +106,16 @@ const Certifications = () => {
                           Download
                         </a>
                       )}
+                      {cert.image && (
+                        <a
+                          href={cert.image}
+                          download
+                          className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-primary text-white rounded-lg font-semibold hover:bg-primary-dark transition-colors duration-200"
+                        >
+                          <FiDownload size={12} />
+                          Download
+                        </a>
+                      )}
                     </div>
                   </div>
                 </div>
@@ -129,6 +143,17 @@ const Certifications = () => {
                         </a>
                       </p>
                     </div>
+                  </div>
+                )}
+
+                {/* Embedded Image */}
+                {cert.image && (
+                  <div className="rounded-xl overflow-hidden border border-foreground/5">
+                    <img
+                      src={cert.image}
+                      alt={cert.title}
+                      className="w-full h-auto object-contain"
+                    />
                   </div>
                 )}
               </div>
