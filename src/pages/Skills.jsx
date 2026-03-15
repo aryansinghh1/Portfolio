@@ -11,7 +11,7 @@ const Skills = () => {
     {
       title: 'Web Development',
       icon: <FiLayout size={18} />,
-      skills: ['MERN Stack', 'React.js', 'Node.js', 'Express.js', 'Bootstrap', 'Tailwind CSS', 'HTML', 'CSS'],
+      skills: ['MERN Stack', 'Bootstrap', 'Tailwind CSS', 'HTML', 'CSS'],
     },
     {
       title: 'Cloud & DevOps',
@@ -21,7 +21,7 @@ const Skills = () => {
     {
       title: 'Databases',
       icon: <FiDatabase size={18} />,
-      skills: ['MongoDB', 'SQL', 'Firebase'],
+      skills: ['MongoDB', 'MySQL'],
     },
     {
       title: 'Core Concepts',
