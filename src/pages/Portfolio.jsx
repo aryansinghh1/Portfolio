@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
+import emailjs from '@emailjs/browser';
 import {
   FiArrowRight,
   FiGithub,
@@ -38,6 +39,12 @@ const Portfolio = () => {
   const [roleIndex, setRoleIndex] = useState(0);
   const [formData, setFormData] = useState({ name: '', email: '', message: '' });
   const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
+
+  // Initialize EmailJS
+  useEffect(() => {
+    emailjs.init('-wlXkgPMX4dHNUZTG'); // Replace with your public key
+  }, []);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -50,11 +57,29 @@ const Portfolio = () => {
     setFormData((prev) => ({ ...prev, [e.target.name]: e.target.value }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    setSubmitted(true);
-    setFormData({ name: '', email: '', message: '' });
-    setTimeout(() => setSubmitted(false), 3000);
+    setLoading(true);
+
+    try {
+      await emailjs.send(
+        'service_vb1sseg', // Replace with your service ID
+        'contact_form', // Template name
+        {
+          name: formData.name,
+          email: formData.email,
+          message: formData.message,
+        }
+      );
+      setSubmitted(true);
+      setFormData({ name: '', email: '', message: '' });
+      setTimeout(() => setSubmitted(false), 3000);
+    } catch (error) {
+      console.error('Email send failed:', error);
+      alert('Failed to send message. Please try again.');
+    } finally {
+      setLoading(false);
+    }
   };
 
   const stats = [
@@ -963,16 +988,22 @@ const Portfolio = () => {
 
                 <button
                   type="submit"
-                  disabled={submitted}
+                  disabled={submitted || loading}
                   className={`w-full flex items-center justify-center gap-2.5 py-4 rounded-xl text-sm font-semibold transition-all duration-300 cursor-pointer ${
                     submitted
                       ? 'bg-emerald-500/20 text-emerald-400 border border-emerald-500/20'
+                      : loading
+                      ? 'bg-primary/50 text-white'
                       : 'bg-primary text-white hover:bg-primary-dark hover:shadow-2xl hover:shadow-primary/20'
                   }`}
                 >
                   {submitted ? (
                     <>
                       <FiCheck size={16} /> Message Sent Successfully
+                    </>
+                  ) : loading ? (
+                    <>
+                      <span className="animate-spin">⏳</span> Sending...
                     </>
                   ) : (
                     <>
