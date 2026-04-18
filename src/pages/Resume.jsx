@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { FiDownload, FiFileText } from 'react-icons/fi';
-import resumePdf from '../assets/Aryan_cv.pdf';
+import resumePdf from '../assets/Aryan_cv2.pdf';
 
 const Resume = () => {
   return (
