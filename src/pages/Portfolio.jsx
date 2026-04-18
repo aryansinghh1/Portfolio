@@ -43,7 +43,7 @@ const Portfolio = () => {
 
   // Initialize EmailJS
   useEffect(() => {
-    emailjs.init(import.meta.env.EMAILJS_PUBLIC_KEY);
+    emailjs.init(import.meta.env.VITE_EMAILJS_PUBLIC_KEY);
   }, []);
 
   useEffect(() => {
@@ -63,8 +63,8 @@ const Portfolio = () => {
 
     try {
       await emailjs.send(
-        import.meta.env.EMAILJS_SERVICE_ID,
-        import.meta.env.EMAILJS_TEMPLATE_ID,
+        import.meta.env.VITE_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
         {
           name: formData.name,
           email: formData.email,
