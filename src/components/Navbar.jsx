@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react';
-import { NavLink, useLocation } from 'react-router-dom';
 import { HiMenuAlt3, HiX } from 'react-icons/hi';
 import { FiSun, FiMoon } from 'react-icons/fi';
 import { useTheme } from '../context/ThemeContext';
@@ -7,28 +6,43 @@ import { useTheme } from '../context/ThemeContext';
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  const location = useLocation();
+  const [activeSection, setActiveSection] = useState('home');
   const { theme, toggleTheme } = useTheme();
 
   useEffect(() => {
-    const handleScroll = () => setScrolled(window.scrollY > 20);
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 20);
+
+      // Update active section based on scroll position
+      const sections = ['home', 'about', 'skills', 'projects', 'certifications', 'achievements', 'resume', 'contact'];
+      for (const section of sections) {
+        const element = document.getElementById(section);
+        if (element) {
+          const rect = element.getBoundingClientRect();
+          if (rect.top <= 100) {
+            setActiveSection(section);
+          }
+        }
+      }
+    };
+
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  useEffect(() => {
+  const handleNavClick = () => {
     setMenuOpen(false);
-  }, [location]);
+  };
 
   const navLinks = [
-    { to: '/', label: 'Home' },
-    { to: '/about', label: 'About' },
-    { to: '/skills', label: 'Skills' },
-    { to: '/projects', label: 'Projects' },
-    { to: '/certifications', label: 'Certifications' },
-    { to: '/achievements', label: 'Achievements' },
-    { to: '/resume', label: 'Resume' },
-    { to: '/contact', label: 'Contact' },
+    { hash: '#home', label: 'Home', id: 'home' },
+    { hash: '#about', label: 'About', id: 'about' },
+    { hash: '#skills', label: 'Skills', id: 'skills' },
+    { hash: '#projects', label: 'Projects', id: 'projects' },
+    { hash: '#certifications', label: 'Certifications', id: 'certifications' },
+    { hash: '#achievements', label: 'Achievements', id: 'achievements' },
+    { hash: '#resume', label: 'Resume', id: 'resume' },
+    { hash: '#contact', label: 'Contact', id: 'contact' },
   ];
 
   return (
@@ -40,11 +54,11 @@ const Navbar = () => {
       }`}
     >
       <nav className="max-w-7xl mx-auto flex items-center justify-between px-6 lg:px-8 h-16">
-        <NavLink to="/" className="relative group">
+        <a href="#home" className="relative group" onClick={handleNavClick}>
           <span className="text-lg font-bold text-foreground tracking-tight">
             &lt;<span className="text-primary">Aryan</span> /&gt;
           </span>
-        </NavLink>
+        </a>
 
         <ul
           className={`
@@ -54,19 +68,18 @@ const Navbar = () => {
           `}
         >
           {navLinks.map((link) => (
-            <li key={link.to} className="list-none">
-              <NavLink
-                to={link.to}
-                className={({ isActive }) =>
-                  `block px-4 py-2 rounded-lg text-[13px] font-medium tracking-wide uppercase transition-all duration-200 ${
-                    isActive
-                      ? 'text-primary bg-primary-light'
-                      : 'text-muted hover:text-foreground hover:bg-foreground/5'
-                  }`
-                }
+            <li key={link.id} className="list-none">
+              <a
+                href={link.hash}
+                onClick={handleNavClick}
+                className={`block px-4 py-2 rounded-lg text-[13px] font-medium tracking-wide uppercase transition-all duration-200 ${
+                  activeSection === link.id
+                    ? 'text-primary bg-primary-light'
+                    : 'text-muted hover:text-foreground hover:bg-foreground/5'
+                }`}
               >
                 {link.label}
-              </NavLink>
+              </a>
             </li>
           ))}
         </ul>
