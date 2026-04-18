@@ -43,7 +43,7 @@ const Portfolio = () => {
 
   // Initialize EmailJS
   useEffect(() => {
-    emailjs.init('-wlXkgPMX4dHNUZTG'); // Replace with your public key
+    emailjs.init(import.meta.env.EMAILJS_PUBLIC_KEY);
   }, []);
 
   useEffect(() => {
@@ -63,8 +63,8 @@ const Portfolio = () => {
 
     try {
       await emailjs.send(
-        'service_vb1sseg', // Replace with your service ID
-        'contact_form', // Template name
+        import.meta.env.EMAILJS_SERVICE_ID,
+        import.meta.env.EMAILJS_TEMPLATE_ID,
         {
           name: formData.name,
           email: formData.email,
