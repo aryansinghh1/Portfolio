@@ -106,7 +106,7 @@ const Portfolio = () => {
     {
       institution: 'M.J.R.P Public School',
       degree: 'Matriculation',
-      grade: 'Percentage: 70.4%',
+      grade: 'Percentage: 74.8%',
       location: 'Kaithwaliya, Ghazipur',
       period: 'April 2020 – March 2021',
     },
