@@ -126,7 +126,7 @@ const Portfolio = () => {
     {
       title: 'Cloud & DevOps',
       icon: <FiCloud size={18} />,
-      skills: ['AWS (Management Console)', 'Apache CloudStack', 'Docker', 'CI/CD Pipelines'],
+      skills: ['Amazon Web Services', 'Microsoft Azure', 'Apache CloudStack', 'Docker', 'CI/CD Pipelines'],
     },
     {
       title: 'Databases',
