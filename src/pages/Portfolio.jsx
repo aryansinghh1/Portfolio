@@ -92,7 +92,7 @@ const Portfolio = () => {
     {
       institution: 'Lovely Professional University',
       degree: 'Bachelor of Technology - Information Technology',
-      grade: 'CGPA: 7.33',
+      grade: 'CGPA: 7.46',
       location: 'Punjab, India',
       period: 'August 2023 – Present',
     },
