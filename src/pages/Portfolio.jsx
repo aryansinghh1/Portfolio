@@ -147,14 +147,34 @@ const Portfolio = () => {
 
   const projects = [
     {
+      title: 'CodeHustle',
+      description:
+        'CodeHustle is a modern, full-stack Hackathon Management & Judging Platform designed to streamline the entire hackathon lifecycle—from team creation, hackathon registration, and project submission to judge evaluations and live leaderboard rankings. ',
+      tags: ['MongoDB', 'Express.js', 'React.js', 'Node.js', 'CSS'],
+      color: 'from-violet-500/20 to-indigo-500/20',
+      number: '01',
+      github: 'https://github.com/aryansinghh1/UMS',
+      date: 'Jul 2026 – Aug 2026',
+    },
+    {
+      title: 'Automated CI/CD Pipeline',
+      description:
+        'A CI/CD pipeline that automates the build, test, and deployment of a web application.',
+      tags: ['HTML', 'CSS', 'Git & GitHub', 'Docker & DockerHub', 'Kubernetes', 'Jenkins', 'Prometheus', 'Grafana'],
+      color: 'from-violet-500/20 to-indigo-500/20',
+      number: '02',
+      github: 'https://github.com/aryansinghh1/CI-CD_Devops',
+      date: 'May 2026 – Jun 2026',
+    },
+    {
       title: 'University Management System',
       description:
         'A full-stack university platform with role-based access control for Admin, Faculty, and Students. Features a faculty attendance system with real-time student visibility and structured MongoDB schemas with proper relationships and validation.',
       tags: ['MongoDB', 'Express.js', 'React.js', 'Node.js', 'Firebase', 'Tailwind CSS'],
       color: 'from-violet-500/20 to-indigo-500/20',
-      number: '01',
+      number: '03',
       github: 'https://github.com/aryansinghh1/UMS',
-      date: 'Feb 2026 – Present',
+      date: 'Feb 2026 – March 2026',
     },
     {
       title: 'Youtube Clone',
@@ -162,7 +182,7 @@ const Portfolio = () => {
         'A fully functional YouTube clone built with React and Vite, featuring real-time video fetching from the YouTube Data API v3. The app replicates core YouTube features including video browsing, search, watch history, and a responsive dark-themed UI.',
       tags: ['React.js', 'HTML', 'CSS', 'Tailwind CSS'],
       color: 'from-violet-500/20 to-indigo-500/20',
-      number: '02',
+      number: '04',
       github: 'https://github.com/aryansinghh1/YouTube_Clone',
       date: 'Jan 2026 – Feb 2026',
     },
@@ -172,7 +192,7 @@ const Portfolio = () => {
         'Created a static website using HTML, CSS, and Tailwind CSS, then containerized it with Docker to run inside a lightweight container. Built the Docker image, ran it locally, and tested the application in-browser using mapped ports for smooth deployment.',
       tags: ['Docker', 'HTML', 'CSS', 'DevOps'],
       color: 'from-cyan-500/20 to-blue-500/20',
-      number: '03',
+      number: '05',
       github: 'https://hub.docker.com/r/aryansinghh1/flask-mini',
       date: 'Nov 2025 – Dec 2025',
     },
@@ -182,7 +202,7 @@ const Portfolio = () => {
         'A web-based chatbot that helps users search and find hotels easily. Integrated the Gemini API to handle user queries like location, budget, and hotel amenities. Performed cross-browser testing to ensure consistent UX across Chrome, Firefox, and Edge.',
       tags: ['JavaScript', 'HTML', 'CSS', 'Tailwind CSS', 'Gemini API'],
       color: 'from-amber-500/20 to-orange-500/20',
-      number: '04',
+      number: '06',
       github: 'https://github.com/aryansinghh1/Hotel-Buddy-',
       date: 'September 2025',
     },
@@ -989,13 +1009,12 @@ const Portfolio = () => {
                 <button
                   type="submit"
                   disabled={submitted || loading}
-                  className={`w-full flex items-center justify-center gap-2.5 py-4 rounded-xl text-sm font-semibold transition-all duration-300 cursor-pointer ${
-                    submitted
-                      ? 'bg-emerald-500/20 text-emerald-400 border border-emerald-500/20'
-                      : loading
+                  className={`w-full flex items-center justify-center gap-2.5 py-4 rounded-xl text-sm font-semibold transition-all duration-300 cursor-pointer ${submitted
+                    ? 'bg-emerald-500/20 text-emerald-400 border border-emerald-500/20'
+                    : loading
                       ? 'bg-primary/50 text-white'
                       : 'bg-primary text-white hover:bg-primary-dark hover:shadow-2xl hover:shadow-primary/20'
-                  }`}
+                    }`}
                 >
                   {submitted ? (
                     <>
